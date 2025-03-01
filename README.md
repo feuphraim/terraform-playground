@@ -15,9 +15,9 @@ Ce repository regroupe des travaux pratiques réalisés sur Terraform. Les fichi
 - Documentation Terraform
 - Registre des modules Terraform
 - Documentation des fournisseurs spécifiques :
-* AWS
-* Azure
-* GCP
+    - AWS
+    - Azure
+    - GCP
 
 ## 🤝 Contribuer
 Les contributions sont les bienvenues ! Soumettez une pull request.
