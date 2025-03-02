@@ -8,8 +8,8 @@ terraform {
 }
 
 resource "google_compute_instance" "special" {
-  name         = "aone"
+  name = "aone"
   machine_type = "e2-micro"
-  zone         = "us-west1-c"
+  zone = "us-west1-c"
 
 }

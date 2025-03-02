@@ -3,7 +3,8 @@ resource "local_sensitive_file" "name" {
     content = var.content
     count = length(var.users)
 
-}variable "users" {
+}
+variable "users" {
   type = list
 }
 
