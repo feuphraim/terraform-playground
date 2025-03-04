@@ -6,11 +6,18 @@ resource "aws_iam_user" "cloud" {
   name = each.value
 }
 
-
 /* #Alternative kk
 resource "aws_iam_user" "cloud" {
-     name = split(":",var.cloud_users)[count.index]
-     count = length(split(":",var.cloud_users))
-
+    count = length(split(":", var.cloud_users))
+    name = split(":", var.cloud_users)[count.index]
+  
 }
 */
+
+#Create an additional resource called upload_sonic_media to upload the files listed in the variable called media to this bucket.
+resource "aws_s3_object" "name" {
+  bucket = aws_s3_bucket.sonic_media.bucket
+  for_each = var.media
+  key = each.value
+  source = each.value
+}
